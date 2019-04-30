@@ -1,0 +1,10 @@
+strlen Привет!:13
+g_utf_strlen Привет!:7
+strlen Hello!:6
+g_utf_strlen Hello!:6
+strlen მიესალმები!:31
+g_utf_strlen მიესალმები!:11
+strlen مرحبا!:11
+g_utf_strlen مرحبا!:6
+RanVal: 8.525482
+end create string
