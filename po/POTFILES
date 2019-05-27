@@ -1,0 +1,7 @@
+data/org.gnome.Gnum.desktop.in
+data/org.gnome.Gnum.appdata.xml.in
+data/org.gnome.Gnum.gschema.xml
+src/gnum-window.ui
+src/main.c
+src/gnum-window.c
+
