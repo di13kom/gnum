@@ -1,6 +1,6 @@
-/* gnum-window.h
+/* gnum-app-window.h
  *
- * Copyright 2019 kom
+ * Copyright 2017 di13kom
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,14 +16,18 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#pragma once
+#ifndef _GNUM_APPWINDOW_H
+#define _GNUM_APPWINDOW_H
 
 #include <gtk/gtk.h>
 
 G_BEGIN_DECLS
 
-#define GNUM_TYPE_WINDOW (gnum_window_get_type())
+#define GNUM_TYPE_APP_WINDOW (gnum_window_get_type())
 
-G_DECLARE_FINAL_TYPE (GnumWindow, gnum_window, GNUM, WINDOW, GtkApplicationWindow)
+G_DECLARE_FINAL_TYPE (GnumAppWindow, gnum_app_window, GNUM, APP_WINDOW, GtkApplicationWindow)
+
+GnumAppWindow* gnum_app_window_new(GnumApp* app);
 
 G_END_DECLS
+#endif /*_GNUM_APPWINDOW_H*/

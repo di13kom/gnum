@@ -1,6 +1,6 @@
-/* gnum-window.c
+/* gnum-app-window.c
  *
- * Copyright 2019 kom
+ * Copyright 2017 di13kom
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,9 +17,9 @@
  */
 
 #include "gnum-config.h"
-#include "gnum-window.h"
+#include "gnum-app-window.h"
 
-struct _GnumWindow
+struct _GnumAppWindow
 {
   GtkApplicationWindow  parent_instance;
 
@@ -28,20 +28,26 @@ struct _GnumWindow
   GtkLabel            *label;
 };
 
-G_DEFINE_TYPE (GnumWindow, gnum_window, GTK_TYPE_APPLICATION_WINDOW)
+G_DEFINE_TYPE (GnumAppWindow, gnum_app_window, GTK_TYPE_APPLICATION_WINDOW)
 
 static void
-gnum_window_class_init (GnumWindowClass *klass)
+gnum_app_window_class_init (GnumAppWindowClass *klass)
 {
   GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
 
-  gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/Gnum/gnum-window.ui");
+  gtk_widget_class_set_template_from_resource (widget_class, "/org/gnome/Gnum/gnum-appwindow.ui");
   gtk_widget_class_bind_template_child (widget_class, GnumWindow, header_bar);
   gtk_widget_class_bind_template_child (widget_class, GnumWindow, label);
 }
 
 static void
-gnum_window_init (GnumWindow *self)
+gnum_app_window_init (GnumWindow *self)
 {
   gtk_widget_init_template (GTK_WIDGET (self));
+}
+
+GnumAppWindow*
+gnum_app_window_new (GnumApp* app)
+{
+	return g_object_new(GNUM_TYPE_APP_WINDOW, "application", app, NULL);
 }

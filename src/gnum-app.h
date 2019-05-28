@@ -1,6 +1,6 @@
-/* gnum-application.h
+/* gnum-app.h
  *
- * Copyright 2019 kom
+ * Copyright 2017 di13kom
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -16,7 +16,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#pragma once
+#ifndef _GNUM_APP_H
+#define _GNUM_APP_H
 
 #include <gtk/gtk.h>
 
@@ -26,4 +27,7 @@ G_BEGIN_DECLS
 
 G_DECLARE_FINAL_TYPE (GnumApp, gnum_app, GNUM, APP, GtkApplication)
 
+GnumApp* gnum_app_new(void);
+
 G_END_DECLS
+#endif  /*_GNUM_APP_H*/
