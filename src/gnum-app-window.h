@@ -23,11 +23,11 @@
 
 G_BEGIN_DECLS
 
-#define GNUM_TYPE_APP_WINDOW (gnum_window_get_type())
+#define GNUM_TYPE_APP_WINDOW (gnum_app_window_get_type())
 
 G_DECLARE_FINAL_TYPE (GnumAppWindow, gnum_app_window, GNUM, APP_WINDOW, GtkApplicationWindow)
 
-GnumAppWindow* gnum_app_window_new(GnumApp* app);
+GnumAppWindow* gnum_app_window_new(void);
 
 G_END_DECLS
-#endif /*_GNUM_APPWINDOW_H*/
+#endif /*_GNUM_APPWINDOW_H */

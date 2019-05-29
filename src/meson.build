@@ -1,6 +1,6 @@
 gnum_sources = [
   'main.c',
-  'gnum-window.c',
+  'gnum-app-window.c',
   'gnum-app.c',
 ]
 

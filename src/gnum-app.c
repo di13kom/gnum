@@ -22,7 +22,7 @@
 
 struct _GnumApp
 {
-  GtkApplications	parent_instance;
+  GtkApplication	parent_instance;
 
   GtkWidget		*window;
 };
@@ -34,7 +34,7 @@ gnum_app_activate (GApplication *app)
 {
   GnumAppWindow *win;
 
-  win = gnum_app_window_new (GNUM_APP (app));
+  win = gnum_app_window_new ();
   gtk_window_present (GTK_WINDOW (win));
 }
 
@@ -51,14 +51,14 @@ gnum_app_class_init(GnumAppClass *klass)
 }
 
 static void
-gnum_app_init(GnumAppClass *self)
+gnum_app_init(GnumApp *self)
 {
 }
 
 GnumApp*
 gnum_app_new(void)
 {
-	return g_object_new(gnum_window_get_type(),
+	return g_object_new(gnum_app_window_get_type(),
 				"application-id", "org.gnome.gnum",
 				"flags", G_APPLICATION_FLAGS_NONE,
 				NULL);

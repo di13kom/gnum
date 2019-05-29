@@ -23,7 +23,7 @@
 
 G_BEGIN_DECLS
 
-#define GNUM_TYPE_APP(gnum_window_get_type())
+#define GNUM_TYPE_APP (gnum_window_get_type())
 
 G_DECLARE_FINAL_TYPE (GnumApp, gnum_app, GNUM, APP, GtkApplication)
 
