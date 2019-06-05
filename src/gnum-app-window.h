@@ -29,5 +29,8 @@ G_DECLARE_FINAL_TYPE (GnumAppWindow, gnum_app_window, GNUM, APP_WINDOW, GtkAppli
 
 GnumAppWindow* gnum_app_window_new(void);
 
+void RowActivated(GtkTreeView *treeView, GtkTreePath *path,
+                  GtkTreeViewColumn *column, gpointer userData);
+
 G_END_DECLS
 #endif /*_GNUM_APPWINDOW_H */
