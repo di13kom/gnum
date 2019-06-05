@@ -2,6 +2,7 @@ gnum_sources = [
   'main.c',
   'gnum-app-window.c',
   'gnum-app.c',
+  'gnum-dialog-win.c'
 ]
 
 gnum_deps = [

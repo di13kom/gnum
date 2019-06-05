@@ -6,11 +6,12 @@
     <property name="can_focus">False</property>
     <property name="default_width">200</property>
     <property name="default_height">400</property>
+    <signal name="delete-event" handler="onDestroyWindow" swapped="no"/>
     <child>
       <placeholder/>
     </child>
     <child>
-      <object class="GtkBox">
+      <object class="GtkBox" id="vBox">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="border_width">10</property>
@@ -25,7 +26,7 @@
             <property name="border_width">5</property>
             <property name="shadow_type">etched-in</property>
             <child>
-              <object class="GtkTextView">
+              <object class="GtkTextView" id="OutTxtView">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="editable">False</property>
@@ -40,7 +41,7 @@
           </packing>
         </child>
         <child>
-          <object class="GtkFrame">
+          <object class="GtkFrame" id="Frame">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
             <property name="label_xalign">0</property>
@@ -76,9 +77,10 @@
             <property name="border_width">5</property>
             <property name="shadow_type">etched-in</property>
             <child>
-              <object class="GtkTextView">
+              <object class="GtkTextView" id="InTxtView">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
+                <property name="wrap_mode">word-char</property>
               </object>
             </child>
           </object>

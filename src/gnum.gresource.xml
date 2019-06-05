@@ -2,5 +2,6 @@
 <gresources>
   <gresource prefix="/org/gnome/Gnum">
     <file>gnum-app-window.ui</file>
+    <file>gnum-dialog-win.ui</file>
   </gresource>
 </gresources>
