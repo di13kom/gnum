@@ -31,4 +31,3 @@ GnumDialogWin* gnum_dialog_win_new(void);
 
 G_END_DECLS
 #endif /* _GNUM_DIALOGWIN_H*/
-

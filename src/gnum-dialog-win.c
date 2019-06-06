@@ -26,7 +26,7 @@ struct _GnumDialogWin
   /* Template widgets */
   GtkWidget *vBox;
   GtkWidget *OutTxtView;
-  GtkWidget *Frame;
+  GtkWidget *Separator;
   GtkWidget *InTxtView;
 };
 
@@ -43,7 +43,7 @@ gnum_dialog_win_class_init (GnumDialogWinClass *klass)
 
   gtk_widget_class_bind_template_child (widget_class, GnumDialogWin, vBox);
   gtk_widget_class_bind_template_child (widget_class, GnumDialogWin, OutTxtView);
-  gtk_widget_class_bind_template_child (widget_class, GnumDialogWin, Frame);
+  gtk_widget_class_bind_template_child (widget_class, GnumDialogWin, Separator);
   gtk_widget_class_bind_template_child (widget_class, GnumDialogWin, InTxtView);
 
 
