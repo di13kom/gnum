@@ -20,6 +20,7 @@
 #define _GNUM_APPWINDOW_H
 
 #include <gtk/gtk.h>
+#include "gnum-app.h"
 
 G_BEGIN_DECLS
 
@@ -27,7 +28,7 @@ G_BEGIN_DECLS
 
 G_DECLARE_FINAL_TYPE (GnumAppWindow, gnum_app_window, GNUM, APP_WINDOW, GtkApplicationWindow)
 
-GnumAppWindow* gnum_app_window_new(void);
+GnumAppWindow* gnum_app_window_new(GnumApp *app);
 
 void RowActivated(GtkTreeView *treeView, GtkTreePath *path,
                   GtkTreeViewColumn *column, gpointer userData);

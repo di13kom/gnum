@@ -18,6 +18,7 @@
 
 #include "gnum-config.h"
 #include "gnum-app-window.h"
+#include "gnum-app.h"
 
 struct _GnumAppWindow
 {
@@ -61,10 +62,12 @@ gnum_app_window_init (GnumAppWindow *self)
 }
 
 GnumAppWindow*
-gnum_app_window_new (void )
+gnum_app_window_new (GnumApp *app)
 {
-	return g_object_new(GNUM_TYPE_APP_WINDOW, NULL);
+	return g_object_new(GNUM_TYPE_APP_WINDOW, "application", app, NULL);
 }
+
+
 
 
 void RowActivated(GtkTreeView *treeView, GtkTreePath *path,

@@ -38,8 +38,8 @@ gnum_app_activate (GApplication *app)
 
 	if(!self->window)
 	{
-		self->window = gnum_app_window_new ();
-		gtk_widget_show(self->window);
+		self->window = gnum_app_window_new (self);
+		//gtk_widget_show(self->window);
 	}
 
 	gtk_window_present (GTK_WINDOW (self->window));
@@ -65,8 +65,8 @@ gnum_app_init(GnumApp *self)
 	GnumApp*
 gnum_app_new(void)
 {
-	return g_object_new(gnum_app_window_get_type(),
-			"application-id", "org.gnome.gnum",
+	return g_object_new(gnum_app_get_type(),
+			"application-id", "org.gnome.Gnum",
 			"flags", G_APPLICATION_FLAGS_NONE,
 			NULL);
 }

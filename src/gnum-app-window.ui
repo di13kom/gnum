@@ -126,7 +126,7 @@
               <object class="GtkTreeView" id="TreeView">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <signal name="row-activated" handler="ActivatedRow" swapped="no"/>
+                <signal name="row-activated" handler="RowActivated" swapped="no"/>
                 <child internal-child="selection">
                   <object class="GtkTreeSelection"/>
                 </child>
@@ -163,3 +163,4 @@
     </child>
   </template>
 </interface>
+

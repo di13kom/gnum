@@ -56,7 +56,7 @@ gnum_dialog_win_init (GnumDialogWin *self)
 }
 
 GnumDialogWin*
-gnum_app_window_new (void )
+gnum_dialog_win_new (void )
 {
 	return g_object_new(GNUM_TYPE_DIALOG_WIN, NULL);
 }
