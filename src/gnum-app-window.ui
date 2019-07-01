@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.22.1 -->
+<!-- Generated with glade 3.20.0 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
+  <object class="GtkListStore" id="liststore1">
+    <columns>
+      <!-- column-name Picture -->
+      <column type="GdkPixbuf"/>
+      <!-- column-name Name -->
+      <column type="gchararray"/>
+      <!-- column-name IP-Address -->
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0">"../availiable.png"</col>
+        <col id="1" translatable="yes">test</col>
+        <col id="2" translatable="yes">192.168.1.1</col>
+      </row>
+    </data>
+  </object>
   <template class="GnumAppWindow" parent="GtkApplicationWindow">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
     <property name="resizable">False</property>
     <property name="default_width">250</property>
     <property name="default_height">500</property>
-    <child type="titlebar">
-      <placeholder/>
-    </child>
     <child>
       <object class="GtkBox" id="vBox">
         <property name="visible">True</property>
@@ -126,6 +140,7 @@
               <object class="GtkTreeView" id="TreeView">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
+                <property name="model">liststore1</property>
                 <signal name="row-activated" handler="RowActivated" swapped="no"/>
                 <child internal-child="selection">
                   <object class="GtkTreeSelection"/>
@@ -161,6 +176,8 @@
         </child>
       </object>
     </child>
+    <child type="titlebar">
+      <placeholder/>
+    </child>
   </template>
 </interface>
-
