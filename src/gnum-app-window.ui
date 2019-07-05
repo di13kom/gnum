@@ -2,7 +2,7 @@
 <!-- Generated with glade 3.20.0 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
-  <object class="GtkListStore" id="liststore1">
+  <object class="GtkListStore" id="gnum-listbox">
     <columns>
       <!-- column-name Picture -->
       <column type="GdkPixbuf"/>
@@ -13,7 +13,7 @@
     </columns>
     <data>
       <row>
-        <col id="0">"../availiable.png"</col>
+        <col id="0">"../Original/available.png"</col>
         <col id="1" translatable="yes">test</col>
         <col id="2" translatable="yes">192.168.1.1</col>
       </row>
@@ -140,10 +140,43 @@
               <object class="GtkTreeView" id="TreeView">
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
-                <property name="model">liststore1</property>
+                <property name="model">gnum-listbox</property>
                 <signal name="row-activated" handler="RowActivated" swapped="no"/>
                 <child internal-child="selection">
                   <object class="GtkTreeSelection"/>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn">
+                    <property name="title" translatable="yes">avaliable</property>
+                    <child>
+                      <object class="GtkCellRendererPixbuf" id="AvailIcon"/>
+                      <attributes>
+                        <attribute name="visible">79</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn">
+                    <property name="title" translatable="yes">name</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="Name"/>
+                      <attributes>
+                        <attribute name="text">1</attribute>
+                      </attributes>
+                    </child>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn">
+                    <property name="title" translatable="yes">ip-address</property>
+                    <child>
+                      <object class="GtkCellRendererText" id="ipAddress"/>
+                      <attributes>
+                        <attribute name="text">2</attribute>
+                      </attributes>
+                    </child>
+                  </object>
                 </child>
               </object>
             </child>
